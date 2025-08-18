@@ -5,58 +5,58 @@
   --h1-size: calc(20px + 1vw);
 }
 
-
 *{
-    padding: 0;
-    margin: 0;
-    background-color: gray;
+  padding: 0;
+  margin: 0;
+  background-color: gray;
 }
 
 h1,p{
-    color: white;
-    font-family: sans-serif;
+  color: white;
+  font-family: sans-serif;
 }
 
 h2{
-    font-family: 'Montserrat';
-    color: white;
-    float: inline-start;
+  font-family: 'Montserrat';
+  color: white;
+  float: inline-start;
 }   
 
 nav{
-    padding-bottom: 10%;
-    background-color: #f1503c;
-    margin-bottom: 1%;
-    border-style: solid;
-    border-color: #12130f;
-    position: relative;
-    height: 50px;
+  padding-bottom: 10%;
+  background-color: #f1503c;
+  margin-bottom: 1%;
+  border-style: solid;
+  border-color: #12130f;
+  position: relative;
+  height: 50px;
 }
 
 .text-nav{
-    background-color: #f1503c;
-    font-weight: lighter;
-    font-size: var(--h1-size);
-    padding-left: 4%;
-    padding-top: 2%;
+  background-color: #f1503c;
+  font-weight: lighter;
+  font-size: var(--h1-size);
+  padding-left: 4%;
+  padding-top: 2%;
 }
     
 .content{
-    background-color: #12130f;
-    padding-top: 10%;
+  background-color: #12130f;
+  padding-top: 10%;
+  overflow: hidden;
 }
 
 .content *{
-    background-color: #12130f;
-    height: 100%;
-    margin-left: 20%;
-    margin-right: 20%;
-    overflow-x: hidden;
+  background-color: #12130f;
+  height: 100vh;
+  margin-left: 20%;
+  margin-right: 20%;
+  overflow: hidden;
 }
 
 .content > h1{
-    text-align: center;
-    font-size: var(--h2-size);
+  text-align: center;
+  font-size: var(--h2-size);
     
 }
 
@@ -96,25 +96,32 @@ nav{
   background-repeat: no-repeat;
 }
 
-/* Example images */
+/* Insert Images */
 #Me_In {
   background-image: url("Me.jpg");
 }
 
 #Facebook_In {
   background-image: url("facebook-logo.png");
+  cursor: pointer;
 }
 
 #Github_In {
   background-image: url("github.png");
+  cursor: pointer;
+
 }
 
 #Phone_In {
   background-image: url("phone.png");
+  cursor: pointer;
+
 }
 
 #Email_In {
   background-image: url("email.png");
+  cursor: pointer;
+
 }
 
 .circle-container .outer-circle:nth-child(3) {
@@ -127,6 +134,38 @@ nav{
 .circle-container .outer-circle:nth-child(3) .inner-circle {
   width: 120px;
   height: 120px;
+}
+
+div.udm{
+  left: -220px;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  overflow: hidden;
+  background-image: url("udm.webp");
+  animation: MoveLeftOutToIn 5s infinite;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-timing-function: reverse;
+  background-color: transparent;
+  z-index: 5;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes MoveLeftOutToIn {
+    from {left: 100vw;rotate: 360deg;}
+    to {left: -220px; rotate: 0deg;}
 }
 
 @media (max-width: 1100px) {
