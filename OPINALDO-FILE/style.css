@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: gray;
+}
+
+h1,p{
+    color: white;
+    font-family: sans-serif;
+}
+
+h2{
+    font-family: 'Montserrat';
+    color: white;
+    float: inline-start;
+}   
+
+nav{
+    padding-bottom: 10%;
+    background-color: #f1503c;
+    margin-bottom: 1%;
+    border-style: solid;
+    border-color: #12130f;
+    position: relative;
+    height: 50px;
+}
+
+.text-nav{
+    background-color: #f1503c;
+    font-weight: lighter;
+    font-size: 50px;
+    padding-left: 4%;
+    padding-top: 2%;
+}
+    
+.content{
+    background-color: #12130f;
+    padding-top: 10%;
+}
+
+.content *{
+    background-color: #12130f;
+    height: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+    overflow-x: hidden;
+}
+
+.content > h1{
+    text-align: center;
+    font-size: 60px;
+    
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;   
+  gap: 10vw;                
+  position: absolute;
+  bottom: -75px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  align-items: center;
+}
+
+.outer-circle {
+  width: 100px;
+  height: 100px;
+  background-color: gray; 
+  border-radius: 50%;
+  border: 3px solid #12130f;
+  position: relative;
+  overflow: visible;
+}
+
+.inner-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #12130f;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Example images */
+#Me_In {
+  background-image: url("Me.jpg");
+}
+
+#Facebook_In {
+  background-image: url("facebook-logo.png");
+}
+
+#Github_In {
+  background-image: url("github.png");
+}
+
+#Phone_In {
+  background-image: url("phone.png");
+}
+
+#Email_In {
+  background-image: url("email.png");
+}
+
+.circle-container .outer-circle:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.circle-container .outer-circle:nth-child(3) .inner-circle {
+  width: 120px;
+  height: 120px;
+}
