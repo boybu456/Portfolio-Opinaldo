@@ -1,14 +1,22 @@
-:root {
+:root{
   --CircleWidth: ;
   --CircleHeight: ;
-  --h2-size: calc(20px + 2vw);
-  --h1-size: calc(20px + 1vw);
 }
 
 *{
   padding: 0;
   margin: 0;
   background-color: gray;
+
+}
+
+html{
+  box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 h1,p{
@@ -35,7 +43,6 @@ nav{
 .text-nav{
   background-color: #f1503c;
   font-weight: lighter;
-  font-size: var(--h1-size);
   padding-left: 4%;
   padding-top: 2%;
 }
@@ -44,20 +51,28 @@ nav{
   background-color: #12130f;
   padding-top: 10%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .content *{
   background-color: #12130f;
-  height: 100vh;
-  margin-left: 20%;
-  margin-right: 20%;
-  overflow: hidden;
+  margin-bottom: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .content > h1{
   text-align: center;
-  font-size: var(--h2-size);
-    
+}
+
+.TopContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .circle-container {
@@ -137,19 +152,70 @@ nav{
 }
 
 div.udm{
-  left: -220px;
+  left: 0px;
   width: 200px;
   height: 200px;
   position: absolute;
-  overflow: hidden;
   background-image: url("udm.webp");
-  animation: MoveLeftOutToIn 5s infinite;
+  animation: MoveLeftOutToIn 3s infinite;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   animation-timing-function: reverse;
   background-color: transparent;
   z-index: 5;
+  padding: 0;
+}
+
+.arrow {
+    cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 1.5vw;
+  height: 1.5vw;
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+.about_title{
+  font-size: xx-large;
+  font-weight: 300;
+}
+
+.about{
+  width: 65vw;
+  margin-top: 10%;
+  padding-top: 25px;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
 }
 
 .fade {
@@ -163,9 +229,44 @@ div.udm{
   transform: translateY(0);
 }
 
+.projects{
+  margin: 0px;
+  width: 100vw;
+}
+
+.project1{
+  margin: 0;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+.vid1{
+  float: left;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.project2{
+  margin: 0;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+.vid2{
+  float: right;
+  margin: 0;
+  margin-right: 20px;
+}
+
+p{
+  margin: 0;
+}
+
 @keyframes MoveLeftOutToIn {
-    from {left: 100vw;rotate: 360deg;}
-    to {left: -220px; rotate: 0deg;}
+    from {left: 90vw;rotate: 360deg;}
+    to {left: 0px; rotate: 0deg;}
 }
 
 @media (max-width: 1100px) {
