@@ -151,20 +151,65 @@ nav{
   height: 120px;
 }
 
-div.udm{
-  left: 0px;
-  width: 200px;
-  height: 200px;
+.udm{
+  margin-top: 10%;
+  left: 10%;
+  width: 10rem;
+  height: 10rem;
   position: absolute;
   background-image: url("udm.webp");
-  animation: MoveLeftOutToIn 3s infinite;
+  animation: Rotate;
+  animation-timeline: view(auto 50%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  animation-timing-function: reverse;
   background-color: transparent;
   z-index: 5;
-  padding: 0;
+}
+
+.css{
+  left: 10%;
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  background-image: url("css.png");
+  animation: MoveLeftOutToIn;
+  animation-timeline: view(70% 0%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  z-index: 5;
+}
+
+.html{
+  right: 10%;
+  width: 11rem;
+  height: 11rem;
+  position: absolute;
+  background-image: url("html.png");
+  animation: MoveRightOutToIn;
+  animation-timeline: view(70% 0%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  z-index: 5;
+}
+
+@keyframes Rotate {
+    from {rotate: 360deg;}
+    to {rotate: 0deg;}
+}
+
+@keyframes MoveLeftOutToIn {
+    from {left: 90vw; rotate: 360deg; opacity: 0;}
+    to {left: 10%; rotate: 0deg; opacity: 1;}
+}
+
+@keyframes MoveRightOutToIn {
+    from {right: 90vw;rotate: 360deg; opacity: 0;}
+    to {right: 10%; rotate: 0deg; opacity: 1;}
 }
 
 .arrow {
@@ -189,6 +234,36 @@ div.udm{
   animation-delay: -0.4s;
 }
 
+.seperate{
+  height: 3rem;
+  border-bottom: 1px solid #1a1a1a;
+  background-color: rgba(40, 40, 40, 0.95);
+  width: 100vw;
+  box-shadow: 0 10px 15px rgba(255, 255, 255, 0.3);
+  animation: dimming 2s infinite;
+}
+
+@keyframes dimming {
+  0% {
+    box-shadow: 0 10px 15px rgba(255, 255, 255, 0.3);
+  }
+  25% {
+    box-shadow: 0 10px 15px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  55%{
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  75% {
+    box-shadow: 0 10px 15px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
 .about_title{
   font-size: xx-large;
   font-weight: 300;
@@ -196,7 +271,6 @@ div.udm{
 
 .about{
   width: 65vw;
-  margin-top: 10%;
   padding-top: 25px;
   display: flex;
   align-content: center;
@@ -205,28 +279,17 @@ div.udm{
 }
 
 @keyframes animate {
-    0% {
-        opacity: 0;
-        transform: rotate(45deg) translate(-20px, -20px);
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: rotate(45deg) translate(20px, 20px);
-    }
-}
-
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
 }
 
 .projects{
@@ -239,12 +302,14 @@ div.udm{
   width: 50vw;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
 } 
 
 .vid1{
   float: left;
   margin: 0;
-  margin-right: 20px;
 }
 
 .project2{
@@ -252,21 +317,24 @@ div.udm{
   width: 50vw;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
 } 
 
 .vid2{
   float: right;
   margin: 0;
-  margin-right: 20px;
+}
+
+.side{
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
 }
 
 p{
   margin: 0;
-}
-
-@keyframes MoveLeftOutToIn {
-    from {left: 90vw;rotate: 360deg;}
-    to {left: 0px; rotate: 0deg;}
 }
 
 @media (max-width: 1100px) {
