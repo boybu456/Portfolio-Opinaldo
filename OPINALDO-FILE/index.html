@@ -38,38 +38,39 @@
     <div class="content">
       <div class="TopContent">
         <h1>Hello, I'm Carl Joshua Opinaldo</h1>
-
+        <div class="udm"></div>
         <a href="#about">
           <div class="arrow">
             <span></span>
             <span></span>
             <span></span>
           </div>
-        </a>   
-      </div>
-
-        <div class="udmlogo">
-          <div class="udm"></div>
+        </a>
+        <section class="seperate"></section>
+        <div class="logos">
+          <div class="css"></div>
+          <div class="html"></div>
         </div>
+      </div>
 
       <section class="about" id="about">
 
         <h2 class="about_title">About</h2>
-        <p class="Intro fade">Motivated IT student with a solid foundation in HTML, CSS, PHP, and MySQL. Strong problem-solving, multitasking, and adaptability skills, eager to gain hands-on experience and expand my knowledge in the tech industry. Also, familiar with electronics, using Arduino IDE, ESP8266 and in Java, and have built a functioning simple avoidance and fire detection robot.</p>
-        <p class="Intro fade">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p class="Intro">Motivated IT student with a solid foundation in HTML, CSS, PHP, and MySQL. Strong problem-solving, multitasking, and adaptability skills, eager to gain hands-on experience and expand my knowledge in the tech industry. Also, familiar with electronics, using Arduino IDE, ESP8266 and in Java, and have built a functioning simple avoidance and fire detection robot.</p>
+        <p class="Intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         
       </section>
 
         <div class="projects">
 
           <div class="project1">
-            <video class="vid1 fade" width="500" controls><source src="vid1.mp4" type="video/mp4">VIDEO NOT PLAYING</video>
-            <p class="textright">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <video class="vid1 autoshow" width="500" controls><source src="vid1.mp4" type="video/mp4">VIDEO NOT PLAYING</video>
+            <p class="textright autoshow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
           </div>
           <br><br>
           <div class="project2">
-          <video class="vid2 fade" width="500" controls><source src="vid1.mp4" type="video/mp4">VIDEO NOT PLAYING</video>
-          <p class="textright">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="textright autoshow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <video class="vid2 fade autoshow" width="500" controls><source src="vid1.mp4" type="video/mp4">VIDEO NOT PLAYING</video>
           </div>
 
         </div>
@@ -77,25 +78,6 @@
     </div>
     
 <script>
-    const faders = document.querySelectorAll('.fade');
-
-    const appearOptions = {
-      threshold: .3
-    };
-
-    const appearOnScroll = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show'); 
-        } else {
-          entry.target.classList.remove('show');
-        }
-      });
-    }, appearOptions);
-
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
 // copy link on click
     document.getElementById("Email_In").onclick = function() {
       const link = "carlopinaldo456@gmail.com";
