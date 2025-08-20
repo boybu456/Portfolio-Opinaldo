@@ -243,6 +243,14 @@ nav{
   animation: dimming 2s infinite;
 }
 
+.textright{
+  text-align: right;
+}
+
+.textleft{
+  text-align: left;
+}
+
 @keyframes dimming {
   0% {
     box-shadow: 0 10px 15px rgba(255, 255, 255, 0.3);
@@ -267,6 +275,10 @@ nav{
 .about_title{
   font-size: xx-large;
   font-weight: 300;
+}
+
+video{
+  width: 60%;
 }
 
 .about{
@@ -295,6 +307,7 @@ nav{
 .projects{
   margin: 0px;
   width: 100vw;
+  margin-bottom: 100px;
 }
 
 .project1{
@@ -302,9 +315,7 @@ nav{
   width: 50vw;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
+  align-items: flex-start;;
 } 
 
 .vid1{
@@ -317,9 +328,7 @@ nav{
   width: 50vw;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
   align-items: flex-start;
-  justify-content: space-around;
 } 
 
 .vid2{
@@ -335,6 +344,13 @@ nav{
 
 p{
   margin: 0;
+}
+
+
+.foot{
+  height: 2rem;
+  background-color: rgba(40, 40, 40, 0.95);
+  width: 100vw;
 }
 
 @media (max-width: 1100px) {
@@ -358,4 +374,3 @@ p{
   }
 
 }
-
